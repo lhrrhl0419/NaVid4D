@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="google-site-verification" content="DOiC7afK4KluEKATjy_DTThhZgLh6My7TjPNXdbI8u4" />
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NaVid-4D: Unleashing Spatial Intelligence in Egocentric RGB-D Videos for Vision-and-Language Navigation</title>
+  <!-- Bootstrap -->
+  <link href="css/bootstrap-4.4.1.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
+  <style>
+    body {
+      background: rgb(255, 255, 255) no-repeat fixed top left;
+      font-family: 'Open Sans', sans-serif;
+    }
+  </style>
+
+</head>
+
+<!-- cover -->
+<section>
+  <div class="jumbotron text-center mt-0">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col">
+          <h2 style="font-size:30px;">NaVid-4D: Unleashing Spatial Intelligence in Egocentric RGB-D Videos for Vision-and-Language Navigation</h2>
+          <h4 style="color:#6e6e6e;"> ICRA 2025 </h4>
+          <hr>
+          <h6>
+            <a href="https://lhrrhl0419.github.io/"> Haoran Liu</a><sup>1,2,*</sup>&nbsp; &nbsp;
+            <a href="https://wkwan7.github.io/"> Weikang Wan</a><sup>1,2,*</sup>&nbsp; &nbsp;
+            <a href="https://scholar.google.com/citations?user=CKWKIscAAAAJ&hl=en/"> Xiqian Yu</a><sup>3,2,*</sup>&nbsp; &nbsp;
+            <a href="https://pku-epic.github.io/NaVid4D/"> Minghan Li</a><sup>2,*</sup>&nbsp; &nbsp;
+            <a href="https://jzhzhang.github.io//"> Jiazhao Zhang</a><sup>1,2</sup>&nbsp; &nbsp;
+            <a href="https://en.zhiyuan.sjtu.edu.cn/en/faculty/955/detail/"> Bo Zhao</a><sup>4</sup>&nbsp; &nbsp;
+            <a href="https://faculty.ustc.edu.cn/chenzhibo/zh_CN/index/988217/list/index.htm/"> Zhibo Chen</a><sup>3</sup>&nbsp; &nbsp;
+            <a href="https://scholar.google.com/citations?user=4XVJrRAAAAAJ&hl=en/"> Zhongyuan Wang</a><sup>5</sup>&nbsp; &nbsp;
+            <a href="https://scholar.google.com/citations?user=X7M0I8kAAAAJ&hl=en/">Zhizheng Zhang</a><sup>2,5,†</sup>
+            <a href="https://hughw19.github.io/">He Wang</a><sup>1,2,5,†</sup>
+            <br>
+            <br>
+            <p> <sup>1</sup>CFCS, School of Computer Science, Peking University&nbsp; &nbsp;
+              <sup>2</sup>Galbot&nbsp; &nbsp;
+              <sup>3</sup>University of Science and Technology of China&nbsp; &nbsp;
+              <sup>4</sup>Shanghai Jiao Tong University&nbsp; &nbsp;
+              <sup>5</sup>Beijing Academy of Artificial Intelligence&nbsp; &nbsp;
+              <br>
+            </p>
+            <p> <sup>*</sup> equal contributions &nbsp;
+              <sup>†</sup> corresponding author &nbsp;
+              <br>
+            </p>
+
+            <div class="row justify-content-center">
+              <div class="column">
+                <p class="mb-5"><a class="btn btn-large btn-light" href="paper/NaVid_4D.pdf" role="button"
+                    target="_blank">
+                    <i class="fa fa-file"></i> Paper </a> </p>
+              </div>
+              <!-- <div class="column">
+                <p class="mb-5"><a class="btn btn-large btn-light" id="code_soon"
+                    href="https://github.com/PKU-EPIC/DexGraspNet2" role="button" target="_blank" disabled=1>
+                    <i class="fa fa-github-alt"></i> Code </a> </p>
+              </div>
+              <div class="column">
+                <p class="mb-5"><a class="btn btn-large btn-light" id="code_soon"
+                    href="https://huggingface.co/datasets/lhrlhr/DexGraspNet2.0" role="button" target="_blank"
+                    disabled=1>
+                    <i class="fa fa-github-alt"></i> Dataset </a> </p>
+              </div> -->
+            </div>
+            
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- abstract -->
+<section>
+  <div class="container" style="width:58%">
+    <div class="row">
+      <div class="col-12">
+        <h2><strong>Abstract</strong></h2>
+        <hr style="margin-top:0px">
+        <p class="text-justify">
+          Understanding and reasoning about the 4D spacetime is crucial for Vision-and-Language Navigation (VLN). However, previous works lack in-depth exploration in this aspect, resulting in bottlenecked spatial perception and action precision of VLN agents. In this work, we introduce NaVid4D, a Vision Language Model (VLM) based navigation agent taking the lead in explicitly showcasing the capabilities of spatial intelligence in the real world. Given natural language instructions, NaVid-4D requires only egocentric RGB-D video streams as observations to perform spatial understanding and reasoning for generating precise instruction-following robotic actions. NaVid-4D learns navigation policies using the data from simulation environments and is endowed with precise spatial understanding and reasoning capabilities using web data. Without the need to pre-train an RGB-D foundation model, we propose a method capable of directly injecting the depth features into the visual encoder of a VLM. We further compare the use of factually captured depth information with the monocularly estimated one and find NaVid-4D works well with both while using estimated depth offers greater generalization capability and better mitigates the sim-to-real gap. Extensive experiments demonstrate that NaVid-4D achieves state-of-the-art performance in simulation environment and makes impressive VLN performance with spatial intelligence happen in the real world.
+        </p>
+        <img src="images/intro.jpg" width="45%" style="margin-bottom:20px;">
+        <img src="images/method.jpg" width="45%" style="margin-bottom:20px;">
+      </div>
+    </div>
+  </div>
+</section>
+<br>
+
+<section>
+  <div class="container" style="width:58%">
+    <div class="row">
+      <div class="col-12">
+        <h2><strong>Video</strong></h2>
+        <hr style="margin-top:0px">
+        <div class="row justify-content-center" style="align-items:center; display:flex;">
+          <video width="90%" playsinline="" preload="" muted="" controls>
+            <source src="videos/Supplementary_video.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+</section>
+<br>
+<br>
+
+<section></section>
+  <div class="container" style="width:58%">
+    <div class="row">
+      <div class="col-12">
+        <h2><strong>Experiment Results</strong></h2> 
+        <hr style="margin-top:0px">
+        <img src="images/exp1.png" width="45%" style="margin-bottom:20px;">
+        <img src="images/exp4.png" width="45%" style="margin-bottom:20px;">
+      </div>
+    </div>
+  </div>
+  </div>
+</section>
+
+
+<br>
+<br>
+
+<!-- citing -->
+<div class="container" style="width:58%">
+  <div class="row ">
+    <div class="col-12">
+      <h2><strong>Citation</strong></h2>
+      <hr style="margin-top:0px">
+      <pre style="background-color: #e9eeef;padding: 1.25em 1.5em">
+<code>
+  @inproceedings{liu2025navid4d,
+    title={NaVid-4D: Unleashing Spatial Intelligence in Egocentric RGB-D Videos for Vision-and-Language Navigation},
+    author={Liu, Haoran and Wan, Weikang and Yu, Xiqian and Li, Minghan and Zhang, Jiazhao and Zhao, Bo and Chen, Zhibo and Wang, Zhongyuan and Zhang, Zhizheng and Wang, He},
+    booktitle={2025 IEEE International Conference on Robotics and Automation (ICRA)}
+  }
+</code></pre>
+    </div>
+  </div>
+</div>
+<br>
+
+<!-- license -->
+<section>
+  <div class="container" style="width:58%">
+    <div class="row">
+      <div class="col-12">
+        <h2><strong>License</strong></h2>
+        <hr style="margin-top:0px">
+        <p class="text-justify">
+          This work and the set are licensed under <a href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a>.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+<br>
+  
+<!-- Contact -->
+<div class="container" style="width:58%">
+  <div class="row ">
+    <div class="col-12">
+      <h2><strong>Contact</strong></h2>
+      <hr style="margin-top:0px">
+      <p>If you have any questions, please feel free to contact
+        <b>Haoran Liu</b> at lhrrhl0419@stu.pku.edu.cn, <b>Zhizheng Zhang</b> at zhangzz@galbot.com, and <b>He Wang</b> at hewang@pku.edu.cn.
+      </p>
+      </pre>
+    </div>
+  </div>
+</div>
+
+
+
+<footer class="text-center" style="margin-bottom:10px; font-size: medium;">
+  <hr>
+  Thanks to <a href="https://lioryariv.github.io/" target="_blank">Lior Yariv</a> for the <a
+    href="https://lioryariv.github.io/idr/" target="_blank">website template</a>.
+</footer>
+<script>
+  MathJax = {
+    tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] }
+  };
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</body>
+
+</html>
