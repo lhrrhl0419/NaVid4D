@@ -37,7 +37,7 @@
             <a href="https://en.zhiyuan.sjtu.edu.cn/en/faculty/955/detail/"> Bo Zhao</a><sup>4</sup>&nbsp; &nbsp;
             <a href="https://faculty.ustc.edu.cn/chenzhibo/zh_CN/index/988217/list/index.htm/"> Zhibo Chen</a><sup>3</sup>&nbsp; &nbsp;
             <a href="https://scholar.google.com/citations?user=4XVJrRAAAAAJ&hl=en/"> Zhongyuan Wang</a><sup>5</sup>&nbsp; &nbsp;
-            <a href="https://scholar.google.com/citations?user=X7M0I8kAAAAJ&hl=en/">Zhizheng Zhang</a><sup>2,5,†</sup>
+            <a href="https://scholar.google.com/citations?user=X7M0I8kAAAAJ&hl=en/"> Zhizheng Zhang</a><sup>2,5,†</sup>
             <a href="https://hughw19.github.io/">He Wang</a><sup>1,2,5,†</sup>
             <br>
             <br>
@@ -91,6 +91,9 @@
           Understanding and reasoning about the 4D spacetime is crucial for Vision-and-Language Navigation (VLN). However, previous works lack in-depth exploration in this aspect, resulting in bottlenecked spatial perception and action precision of VLN agents. In this work, we introduce NaVid4D, a Vision Language Model (VLM) based navigation agent taking the lead in explicitly showcasing the capabilities of spatial intelligence in the real world. Given natural language instructions, NaVid-4D requires only egocentric RGB-D video streams as observations to perform spatial understanding and reasoning for generating precise instruction-following robotic actions. NaVid-4D learns navigation policies using the data from simulation environments and is endowed with precise spatial understanding and reasoning capabilities using web data. Without the need to pre-train an RGB-D foundation model, we propose a method capable of directly injecting the depth features into the visual encoder of a VLM. We further compare the use of factually captured depth information with the monocularly estimated one and find NaVid-4D works well with both while using estimated depth offers greater generalization capability and better mitigates the sim-to-real gap. Extensive experiments demonstrate that NaVid-4D achieves state-of-the-art performance in simulation environment and makes impressive VLN performance with spatial intelligence happen in the real world.
         </p>
         <img src="images/intro.jpg" width="80%" style="display:block; margin:auto; margin-bottom:20px;">
+        <p class="text-justify">
+          4D spatio-temporal reasoning capabilities in vision language navigation. NaVid-4D can comprehend and reason about 3D spatial and 1D temporal relationships across diverse tasks and directly predict actions to follow given instructions. (The images with blue, grey, and yellow borders represent the start, middle, and end states of the task, respectively.)
+        </p>
       </div>
     </div>
   </div>
@@ -123,7 +126,7 @@
         <h2><strong>Method</strong></h2>
         <hr style="margin-top:0px">
         <p class="text-justify">
-          To explicitly take 3D information input, we design a 3D-aware vision encoder which encode RGB and depth images separately. We first separate the first 20 layers of ViT to encode RGB and depth images into an aligned feature space, then share the last 20 layers to further process them. We use the weight pretrained on large-scale RGB images to initialize the vision encoder and freeze only the RGB layers. In this way we can avoid the high-cost pretraining of RGB-D foundation models while still be able to encode the 3D information explicitly.
+          To explicitly take 3D input, we design a 3D-aware vision encoder which encodes RGB and depth images separately. We first separate the first 20 layers of ViT to encode RGB and depth images into an aligned feature space, then share the last 20 layers to further process them. We use the weight pretrained on large-scale RGB images to initialize the vision encoder and freeze only the RGB layers. In this way we can avoid the high-cost pretraining of RGB-D foundation models while still be able to encode the 3D information explicitly.
         </p>
         <img src="images/method.jpg" width="80%" style="display:block; margin:auto; margin-bottom:20px;">
       </div>
@@ -139,6 +142,9 @@
       <div class="col-12">
         <h2><strong>Experiment Results</strong></h2> 
         <hr style="margin-top:0px">
+        <p class="text-justify">
+          With explicit depth input, our model can achieve better performance comparing to NaVid and other baselines. It can also be shown that the performance of using estimated depth for navigation data is comparable to the performance of using ground-truth captured depth in simulation. Since estimated depth has smaller sim-to-real gap, we choose to use it both in the training time and the inference time.
+        </p>
         <img src="images/exp1.jpg" width="60%" style="display:block; margin:auto; margin-bottom:20px;">
         <img src="images/exp4.jpg" width="60%" style="display:block; margin:auto; margin-bottom:20px;">
       </div>
